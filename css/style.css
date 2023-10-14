@@ -73,12 +73,13 @@ header .navbar .icons .icon:hover {
 .info {
   display: flex;
   align-items: center;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-bottom: 30px;
+  text-align: center;
+  padding: 30px 50px;
   background-color: cadetblue;
   justify-content: center;
+  flex-direction: column;
   color: white;
+  height: 100%;
 }
 
 /* Banner style */
@@ -89,7 +90,7 @@ header .navbar .icons .icon:hover {
 
 /* Productcard style */
 .product-card {
-  width: 33, 33% -20px;
+  width: 100% -20px;
   height: auto;
   background-color: #fff;
   padding: 10px;
@@ -121,6 +122,18 @@ header .navbar .icons .icon:hover {
   cursor: pointer;
 }
 
+.cadeautjes {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* 1 kolom voor filter-zone, 3 kolommen voor de hoofdinhoud */
+  gap: 50px; /* Ruimte tussen de kolommen */
+  padding: 20px;
+}
+
 /* Stijlen voor productkaarten, formulieren, etc. */
 /* Product card styles */
 #homepage-products {
@@ -130,6 +143,31 @@ header .navbar .icons .icon:hover {
   padding-left: 50px;
   padding-right: 50px;
   margin-bottom: 30px;
+}
+
+footer {
+  background-color: #ffffff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+}
+footer .footer-links {
+  display: flex;
+  list-style: none;
+}
+footer .footer-links a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: color 0.3s;
+}
+footer .footer-links a:hover {
+  color: cadetblue;
 }
 
 /* Voeg hier je eigen stijlen toe. */
@@ -143,15 +181,29 @@ header .navbar .icons .icon:hover {
 @media screen and (max-width: 768px) {
   #homepage-products {
     flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
   }
   .search-box {
     display: none;
+  }
+  .filter-zone {
+    display: none;
+  }
+  .container {
+    display: flex;
+    grid-template-columns: 1fr 3fr; /* 1 kolom voor filter-zone, 3 kolommen voor de hoofdinhoud */
   }
 }
 @media screen and (max-width: 500px) {
   #homepage-products {
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
+  }
+  .container {
+    display: flex;
+    grid-template-columns: 1fr 3fr; /* 1 kolom voor filter-zone, 3 kolommen voor de hoofdinhoud */
   }
   header {
     padding-bottom: 10px;
@@ -177,6 +229,9 @@ header .navbar .icons .icon:hover {
   .navbar .icons svg {
     margin: 0 10px;
   }
+  .navbar .filter-zone {
+    display: none;
+  }
   .titel {
     font-size: 10px;
   }
@@ -185,8 +240,10 @@ header .navbar .icons .icon:hover {
   background-color: white;
   margin-left: 30px;
   padding: 20px;
-  width: 250px; /* Pas de breedte aan zoals gewenst */
+  width: 100%; /* Pas de breedte aan zoals gewenst */
+  height: 150px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 .filter-zone h2 {
   font-size: 20px;
@@ -201,18 +258,11 @@ header .navbar .icons .icon:hover {
 }
 .filter-zone ul li a {
   text-decoration: none;
-  color: #007BFF;
+  color: cadetblue;
   font-weight: bold;
 }
 .filter-zone ul li a:hover {
   text-decoration: underline;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 3fr; /* 1 kolom voor filter-zone, 3 kolommen voor de hoofdinhoud */
-  gap: 0px; /* Ruimte tussen de kolommen */
-  padding: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -84,12 +84,13 @@ header {
 {
   display: flex;
   align-items: center;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-bottom: 30px;
+  text-align: center;
+  padding: 30px 50px;
   background-color: cadetblue;
-justify-content: center;
+  justify-content: center;
+  flex-direction: column;
   color: white;
+  height: 100%;
 }
 /* Banner style */
 .banner {
@@ -101,7 +102,7 @@ justify-content: center;
 
 /* Productcard style */
 .product-card {
-  width: (33,33% -20px);
+  width: (100% -20px);
   height: auto;
   background-color: #fff;
   padding: 10px;
@@ -132,7 +133,16 @@ justify-content: center;
     cursor: pointer;
   }
 }
-
+.cadeautjes {
+  width: 100%;
+  height: auto;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* 1 kolom voor filter-zone, 3 kolommen voor de hoofdinhoud */
+  gap: 50px; /* Ruimte tussen de kolommen */
+  padding: 20px;
+}
 /* Stijlen voor productkaarten, formulieren, etc. */
 /* Product card styles */
 #homepage-products {
@@ -144,7 +154,36 @@ justify-content: center;
   margin-bottom: 30px;
 
 }
+footer  {
+  background-color: #ffffff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
 
+  .footer-links {
+    display: flex;
+    list-style: none;
+
+    li {
+    }
+
+    a {
+      text-decoration: none;
+      color: #000000;
+      font-size: 18px;
+      padding: 10px 20px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: cadetblue;
+      }
+    }
+  }
+}
 /* Voeg hier je eigen stijlen toe. */
 .titel {
   text-align: center;
@@ -155,54 +194,73 @@ justify-content: center;
 /* Voeg hier mediaqueries toe voor andere schermformaten als dat nodig is. */
 @media screen and (max-width: 768px) {
   #homepage-products {
-   flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
   }
   .search-box {
     display: none;
+  }
+  .filter-zone {
+    display: none;
+  }
+  .container {
+    display: flex;
+    grid-template-columns: 1fr 3fr; /* 1 kolom voor filter-zone, 3 kolommen voor de hoofdinhoud */
   }
 }
 @media screen and (max-width: 500px) {
   #homepage-products {
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
+  }
+  .container {
+    display: flex;
+    grid-template-columns: 1fr 3fr; /* 1 kolom voor filter-zone, 3 kolommen voor de hoofdinhoud */
   }
   header { padding-bottom: 10px; }
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 0px;
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
 
-      .nav-links {
-        width: 100%;
-        justify-content: space-between;
-        margin: 0 auto;
+    .nav-links {
+      width: 100%;
+      justify-content: space-between;
+      margin: 0 auto;
 
-        li {
-          margin: 0;
-        }
-      }
-
-      .icons {
-        text-align: center;
-        margin-right: 20px;
-        margin-top: 5px;
-
-        svg {
-          margin: 0 10px;
-        }
+      li {
+        margin: 0;
       }
     }
 
-    .titel {
-      font-size: 10px;
+    .icons {
+      text-align: center;
+      margin-right: 20px;
+      margin-top: 5px;
+
+      svg {
+        margin: 0 10px;
+      }
+    }
+    .filter-zone {
+      display: none;
     }
   }
+
+  .titel {
+    font-size: 10px;
+  }
+}
 .filter-zone {
   background-color: white;
   margin-left: 30px;
   padding: 20px;
-  width: 250px; /* Pas de breedte aan zoals gewenst */
+  width: 100%; /* Pas de breedte aan zoals gewenst */
+  height: 150px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 
   h2 {
     font-size: 20px;
@@ -217,7 +275,7 @@ justify-content: center;
       margin: 5px 0;
       a {
         text-decoration: none;
-        color: #007BFF;
+        color: cadetblue;
         font-weight: bold;
 
         &:hover {
@@ -227,12 +285,8 @@ justify-content: center;
     }
   }
 }
-.container {
-  display: grid;
-  grid-template-columns: 1fr 3fr; /* 1 kolom voor filter-zone, 3 kolommen voor de hoofdinhoud */
-  gap: 0px; /* Ruimte tussen de kolommen */
-  padding: 20px;
-}
+
+
 
 
 
