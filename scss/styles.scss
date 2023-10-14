@@ -1,0 +1,238 @@
+/* Basisstijlen */
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+header {
+  color: #fff;
+  padding: 20px;
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+
+      li {
+        margin: 0 15px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 18px;
+        padding: 10px 20px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: cadetblue;
+        }
+      }
+    }
+
+    .search-box {
+      margin-left: auto; /* Duwt de zoekbox helemaal naar rechts */
+      text-align: center;
+      border: black 2px solid;
+      border-radius: 6px;
+
+      input[type="text"] {
+        padding: 5px;
+        width: 150px; /* Pas de breedte aan zoals gewenst */
+        border: 1px solid #fff;
+        border-radius: 5px;
+      }
+
+      button {
+        background-color: cadetblue;
+        color: white;
+        border: 1px solid cadetblue;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      margin-left: 20px;
+
+      .icon {
+        font-size: 24px;
+        margin-left: 10px;
+        color: #fff;
+
+        a {
+          font-size: inherit;
+        }
+        &:hover {
+          color: cadetblue;
+        }
+      }
+    }
+  }
+}
+.info
+{
+  display: flex;
+  align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 30px;
+  background-color: cadetblue;
+justify-content: center;
+  color: white;
+}
+/* Banner style */
+.banner {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Productcard style */
+.product-card {
+  width: (33,33% -20px);
+  height: auto;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  margin-left: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 10px;
+  img {
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  h2 {
+    margin: 10px 0;
+  }
+  p {
+    margin: 5px 0;
+  }
+  button {
+    margin-top: 10px;
+    background-color: cadetblue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+}
+
+/* Stijlen voor productkaarten, formulieren, etc. */
+/* Product card styles */
+#homepage-products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 30px;
+
+}
+
+/* Voeg hier je eigen stijlen toe. */
+.titel {
+  text-align: center;
+  font-size: 20px;
+  color: cadetblue;
+}
+
+/* Voeg hier mediaqueries toe voor andere schermformaten als dat nodig is. */
+@media screen and (max-width: 768px) {
+  #homepage-products {
+   flex-direction: column;
+  }
+  .search-box {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  #homepage-products {
+    flex-direction: column;
+    align-items: center;
+  }
+  header { padding-bottom: 10px; }
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+        margin: 0 auto;
+
+        li {
+          margin: 0;
+        }
+      }
+
+      .icons {
+        text-align: center;
+        margin-right: 20px;
+        margin-top: 5px;
+
+        svg {
+          margin: 0 10px;
+        }
+      }
+    }
+
+    .titel {
+      font-size: 10px;
+    }
+  }
+.filter-zone {
+  background-color: white;
+  margin-left: 30px;
+  padding: 20px;
+  width: 250px; /* Pas de breedte aan zoals gewenst */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 5px 0;
+      a {
+        text-decoration: none;
+        color: #007BFF;
+        font-weight: bold;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* 1 kolom voor filter-zone, 3 kolommen voor de hoofdinhoud */
+  gap: 0px; /* Ruimte tussen de kolommen */
+  padding: 20px;
+}
+
+
+
