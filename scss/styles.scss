@@ -1,12 +1,41 @@
 /* Basisstijlen */
-body {
-  background-color: white;
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  background-color: white;
   font-family: 'Nunito', sans-serif;
 }
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
 
+  a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0 5px;
+    border-radius: 50%;
+
+    &.active {
+      background-color: cadetblue;
+      color: white;
+    }
+
+    &:hover {
+      background-color: #a4d3d5;
+    }
+  }
+}
 header {
   color: #fff;
   padding: 20px;
@@ -80,6 +109,22 @@ header {
     }
   }
 }
+.product-introduction
+{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 0 40px;
+  justify-content: center;
+  flex-direction: column;
+  color: cadetblue;
+  height: 100%;
+ h1 {
+    font-size: 25px;
+    margin: 0;
+    padding: 20px;
+  }
+}
 .info
 {
   display: flex;
@@ -112,6 +157,7 @@ header {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   border-radius: 10px;
+  cursor: pointer;
   img {
     max-width: 100%;
     border-top-left-radius: 10px;
@@ -131,6 +177,14 @@ header {
     border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+  &:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    background-color: #a4d3d5;
   }
 }
 .cadeautjes {
@@ -155,13 +209,13 @@ header {
 
 }
 footer  {
-  background-color: #ffffff;
+  background-color: cadetblue;
   color: white;
   padding: 20px;
   text-align: center;
   display: flex;
   align-items: center;
-  margin: 0 auto;
+  margin: 30px auto 0 auto;
   justify-content: center;
 
   .footer-links {
@@ -173,13 +227,15 @@ footer  {
 
     a {
       text-decoration: none;
-      color: #000000;
+      color: white;
       font-size: 18px;
       padding: 10px 20px;
       transition: color 0.3s;
 
       &:hover {
-        color: cadetblue;
+        background-color: white;
+        border-radius: 10px;
+        color: black;
       }
     }
   }
@@ -187,7 +243,8 @@ footer  {
 /* Voeg hier je eigen stijlen toe. */
 .titel {
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
+  padding: 30px;
   color: cadetblue;
 }
 
@@ -197,6 +254,10 @@ footer  {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+.product-card {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
   }
   .search-box {
     display: none;
@@ -255,7 +316,7 @@ footer  {
 }
 .filter-zone {
   background-color: white;
-  margin-left: 30px;
+  margin-left: 50px;
   padding: 20px;
   width: 100%; /* Pas de breedte aan zoals gewenst */
   height: 150px;
