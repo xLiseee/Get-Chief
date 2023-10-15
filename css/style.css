@@ -1,4 +1,3 @@
-/* Basisstijlen */
 * {
   margin: 0;
   padding: 0;
@@ -62,15 +61,19 @@ header .navbar .nav-links a {
 header .navbar .nav-links a:hover {
   color: cadetblue;
 }
+header .navbar .nav-links a img {
+  width: 20px;
+  height: auto;
+}
 header .navbar .search-box {
-  margin-left: auto; /* Duwt de zoekbox helemaal naar rechts */
+  margin-left: auto;
   text-align: center;
   border: black 2px solid;
   border-radius: 6px;
 }
 header .navbar .search-box input[type=text] {
   padding: 5px;
-  width: 150px; /* Pas de breedte aan zoals gewenst */
+  width: 150px;
   border: 1px solid #fff;
   border-radius: 5px;
 }
@@ -99,6 +102,119 @@ header .navbar .icons .icon:hover {
   color: cadetblue;
 }
 
+.contact-container {
+  background-color: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.contact-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: cadetblue;
+}
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-container form label {
+  font-size: 16px;
+  margin: 5px 0;
+  text-align: left;
+  color: black;
+}
+.contact-container form input[type=text],
+.contact-container form input[type=email],
+.contact-container form input[type=password],
+.contact-container form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.contact-container form button {
+  background-color: cadetblue;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 40%;
+  margin: 10px auto;
+}
+.contact-container form button:hover {
+  background-color: #5a8b8d;
+}
+
+.product-detail {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 20px 50px;
+}
+.product-detail .product-image img {
+  max-width: 600px;
+  border-radius: 20px;
+}
+.product-detail .product-info {
+  margin-left: 40px;
+}
+.product-detail .product-info h1 {
+  font-size: 30px;
+}
+.product-detail .product-info p {
+  font-size: 16px;
+}
+.product-detail .product-info strong {
+  color: cadetblue;
+}
+.product-detail .product-info label {
+  font-size: 16px;
+}
+.product-detail .product-info input[type=number] {
+  width: 50px;
+  height: 35px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.product-detail .product-info .add-to-cart {
+  background-color: cadetblue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.go-back {
+  background-color: lightgray;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 10px 50px;
+}
+.go-back:hover {
+  background-color: cadetblue;
+  color: white;
+}
+.go-back a {
+  text-decoration: none;
+  color: white;
+}
+
 .product-introduction {
   display: flex;
   align-items: center;
@@ -115,6 +231,23 @@ header .navbar .icons .icon:hover {
   padding: 20px;
 }
 
+.container1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 50px;
+}
+.container1 .tekst-zone {
+  font-size: 17px;
+  text-align: center;
+}
+.container1 #foto-van-lise {
+  width: 70%;
+  height: auto;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
 .info {
   display: flex;
   align-items: center;
@@ -125,15 +258,14 @@ header .navbar .icons .icon:hover {
   flex-direction: column;
   color: white;
   height: 100%;
+  font-size: 17px;
 }
 
-/* Banner style */
 .banner img {
   width: 100%;
   height: auto;
 }
 
-/* Productcard style */
 .product-card {
   width: 100% -20px;
   height: auto;
@@ -183,13 +315,15 @@ header .navbar .icons .icon:hover {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 3fr; /* 1 kolom voor filter-zone, 3 kolommen voor de hoofdinhoud */
-  gap: 50px; /* Ruimte tussen de kolommen */
+  grid-template-columns: 1fr 3fr;
+  gap: 50px;
   padding: 20px;
 }
 
-/* Stijlen voor productkaarten, formulieren, etc. */
-/* Product card styles */
+.titel h2 {
+  font-size: 35px;
+}
+
 #homepage-products {
   display: flex;
   justify-content: space-between;
@@ -200,14 +334,13 @@ header .navbar .icons .icon:hover {
 }
 
 footer {
-  background-color: cadetblue;
-  color: white;
+  color: cadetblue;
   padding: 20px;
   text-align: center;
   display: flex;
-  align-items: center;
-  margin: 30px auto 0 auto;
+  margin-top: 30px;
   justify-content: center;
+  width: 100%;
 }
 footer .footer-links {
   display: flex;
@@ -215,18 +348,75 @@ footer .footer-links {
 }
 footer .footer-links a {
   text-decoration: none;
-  color: white;
-  font-size: 18px;
+  color: black;
+  font-size: 13px;
   padding: 10px 20px;
   transition: color 0.3s;
 }
 footer .footer-links a:hover {
-  background-color: white;
-  border-radius: 10px;
-  color: black;
+  color: #a4d3d5;
 }
 
-/* Voeg hier je eigen stijlen toe. */
+.login-container {
+  background-color: #fff;
+  padding: 20px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.login-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.login-container .login-form {
+  display: flex;
+  flex-direction: column;
+}
+.login-container .login-form label {
+  font-size: 16px;
+  margin: 5px 0;
+  text-align: left;
+}
+.login-container .login-form input[type=email],
+.login-container .login-form input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.login-container .login-form button {
+  background-color: cadetblue;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.login-container .login-form button:hover {
+  background-color: #5a8b8d;
+}
+.login-container .forgot-password {
+  font-size: 14px;
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: cadetblue;
+}
+.login-container .forgot-password:hover {
+  text-decoration: underline;
+}
+
 .titel {
   text-align: center;
   font-size: 25px;
@@ -234,8 +424,91 @@ footer .footer-links a:hover {
   color: cadetblue;
 }
 
-/* Voeg hier mediaqueries toe voor andere schermformaten als dat nodig is. */
+@media screen and (max-width: 1000px) {
+  .contact-container {
+    width: 80%;
+  }
+  .product-detail {
+    display: flex;
+    max-width: 90%;
+  }
+  .product-detail .product-image {
+    max-width: 70%;
+    margin-right: 30px;
+  }
+  .product-detail .product-image img {
+    max-width: 100%;
+  }
+  .product-detail .product-info {
+    margin: 20px 0;
+  }
+  .product-detail .product-info h1 {
+    font-size: 24px;
+  }
+  .product-detail .product-info p {
+    font-size: 14px;
+  }
+  .product-detail .product-info input[type=number] {
+    width: 40px;
+    height: 30px;
+    font-size: 14px;
+  }
+  .product-detail .product-info .add-to-cart {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin: 10px;
+  }
+  .go-back {
+    margin: 10px 20px;
+  }
+}
+footer {
+  font-size: 6px;
+}
+footer a {
+  height: 10px;
+}
+
 @media screen and (max-width: 768px) {
+  .contact-container {
+    width: 90%;
+  }
+  .contact-container h1 {
+    font-size: 20px;
+  }
+  .product-detail {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .product-detail .product-image {
+    max-width: 70%;
+  }
+  .product-detail .product-image img {
+    max-width: 100%;
+  }
+  .product-detail .product-info {
+    margin: 20px 0;
+  }
+  .product-detail .product-info h1 {
+    font-size: 24px;
+  }
+  .product-detail .product-info p {
+    font-size: 14px;
+  }
+  .product-detail .product-info input[type=number] {
+    width: 40px;
+    height: 30px;
+    font-size: 14px;
+  }
+  .product-detail .product-info .add-to-cart {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  .go-back {
+    margin: 10px 20px;
+  }
   #homepage-products {
     flex-direction: column;
     align-items: center;
@@ -251,46 +524,164 @@ footer .footer-links a:hover {
   .filter-zone {
     display: none;
   }
+  header .navbar {
+    display: flex;
+    padding: 0;
+    margin: 0 auto;
+  }
+  header .navbar .nav-links {
+    width: 100%;
+    margin: 0 auto;
+  }
+  header .navbar .nav-links li {
+    margin: 0;
+  }
+  header .navbar .icons {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+  header .navbar .icons svg {
+    margin: 0 10px;
+  }
   .container {
     display: flex;
-    grid-template-columns: 1fr 3fr; /* 1 kolom voor filter-zone, 3 kolommen voor de hoofdinhoud */
+    grid-template-columns: 1fr 3fr;
+  }
+  .login-container {
+    width: 100%;
+    padding: 10px;
+  }
+  .login-container h1 {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 500px) {
+  .contact-container {
+    width: 100%;
+  }
+  .container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 30px;
+  }
+  .container1 .tekst-zone {
+    font-size: 12px;
+  }
+  .container1 #foto-van-lise {
+    width: 100%;
+    height: auto;
+  }
+  .product-introduction {
+    padding: 0;
+  }
+  .product-introduction h1 {
+    padding: 30px;
+  }
+  .info {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 30px;
+  }
+  .titel h2 {
+    font-size: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .product-detail {
+    margin: 20px;
+  }
+  .product-detail .product-image {
+    margin: 0 auto;
+  }
+  .product-detail .product-image img {
+    max-width: 100%;
+  }
+  .product-detail .product-info {
+    margin: 20px 0;
+    text-align: center;
+  }
+  .product-detail .product-info h1 {
+    font-size: 20px;
+  }
+  .product-detail .product-info p {
+    font-size: 12px;
+  }
+  .product-detail .product-info input[type=number] {
+    width: 30px;
+    height: 25px;
+    font-size: 12px;
+  }
+  .product-detail .product-info .add-to-cart {
+    font-size: 12px;
+    padding: 6px 12px;
+    margin: 10px 0;
+  }
+  .go-back {
+    font-size: 12px;
+    margin: 10px 20px;
+  }
   #homepage-products {
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  .login-container {
+    width: 100%;
+    padding: 10px;
+  }
+  .login-container .login-form label {
+    text-align: center;
+  }
+  .login-container .login-form input[type=email],
+  .login-container .login-form input[type=password] {
+    width: 100%;
+  }
+  .login-container .login-form button {
+    width: 100%;
+  }
+  .product-introduction h1 {
+    font-size: 20px;
+  }
+  footer .footer-links a {
+    font-size: 8px;
   }
   .container {
     display: flex;
-    grid-template-columns: 1fr 3fr; /* 1 kolom voor filter-zone, 3 kolommen voor de hoofdinhoud */
+    grid-template-columns: 1fr 3fr;
+    padding: 0;
   }
   header {
     padding-bottom: 10px;
   }
-  .navbar {
+  header .navbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px;
+    padding: 0;
+    margin: 0 auto;
   }
-  .navbar .nav-links {
+  header .navbar .nav-links {
     width: 100%;
     justify-content: space-between;
     margin: 0 auto;
   }
-  .navbar .nav-links li {
+  header .navbar .nav-links li {
     margin: 0;
   }
-  .navbar .icons {
+  header .navbar .icons {
     text-align: center;
-    margin-right: 20px;
+    margin: 0 auto;
     margin-top: 5px;
   }
-  .navbar .icons svg {
+  header .navbar .icons svg {
     margin: 0 10px;
   }
-  .navbar .filter-zone {
+  header .navbar .filter-zone {
     display: none;
   }
   .titel {
@@ -301,7 +692,7 @@ footer .footer-links a:hover {
   background-color: white;
   margin-left: 50px;
   padding: 20px;
-  width: 100%; /* Pas de breedte aan zoals gewenst */
+  width: 100%;
   height: 150px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
